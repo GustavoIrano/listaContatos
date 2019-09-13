@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-item *ngFor="let contact of contacts">
+    <ion-avatar slot="start">
+      <img src="{{ contact.image }}">
+    </ion-avatar>
+    <ion-label>
+      {{ contact.name }} <br>
+      <small>
+        {{ contact.phone }} - {{ contact.email }}
+      </small>
+    </ion-label>
+    <ion-button routerLink="contact-edit/{{contact.id}}" color="danger">Alterar Contato</ion-button>
+    <ion-button (click)="deleteContact()" color="danger">Deletar Contato</ion-button>
+  </ion-item>
+</ion-list>

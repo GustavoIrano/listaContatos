@@ -1,0 +1,87 @@
+<ion-content *ngIf="contact" class="ion-padding">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col sizeXs="12" sizeMd="6">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                Cadastrar contato
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-list lines="none">
+  
+              <form [formGroup]="form">
+                <ion-item>
+                  <ion-label position="floating">ID</ion-label>
+                  <ion-input type="text" formControlName="id" value="{{contact.id}}"></ion-input>
+                </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Nome</ion-label>
+                    <ion-input type="text" formControlName="name" value="{{contact.name}}"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">E-mail</ion-label>
+                    <ion-input type="email" formControlName="email" value="{{contact.email}}"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label position="floating">CPF</ion-label>
+                      <ion-input type="text" formControlName="cpf" value="{{contact.cpf}}"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label position="floating">Telefone</ion-label>
+                      <ion-input type="text" formControlName="phone" value="{{contact.phone}}"></ion-input>
+                  </ion-item>
+            </form>
+  
+              
+            <hr>
+  
+            <form [formGroup]="formAddress">
+                <ion-item >
+                    <ion-label position="floating">Rua</ion-label>
+                    <ion-input type="text" formControlName="street" value="{{contact.address.street}}"></ion-input>
+                </ion-item>
+      
+                <ion-item>
+                    <ion-label position="floating">Número</ion-label>
+                    <ion-input type="text" formControlName="number" value="{{contact.address.number}}"></ion-input>
+                </ion-item>
+      
+                <ion-item>
+                    <ion-label position="floating">Bairro</ion-label>
+                    <ion-input type="text" formControlName="neighborhood" value="{{contact.address.neighborhood}}"></ion-input>
+                </ion-item>
+      
+                <ion-item>
+                    <ion-label position="floating">Cidade</ion-label>
+                    <ion-input type="text" formControlName="city" value="{{contact.address.city}}"></ion-input>
+                </ion-item>
+      
+                <ion-item>
+                    <ion-label position="floating">País</ion-label>
+                    <ion-input type="text" formControlName="country" value="{{contact.address.country}}"></ion-input>
+                </ion-item>
+              </form>
+           
+          </ion-list>
+  
+              <p>
+                  <ion-buttons end>
+                    <ion-button routerLink="/" color="danger" >
+                      Cancelar
+                    </ion-button>
+                    <ion-button color="primary" [disabled]="form.invalid"
+                      (click)="submit()">
+                      Alterar
+                    </ion-button>
+                  </ion-buttons>
+              </p>
+  
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
