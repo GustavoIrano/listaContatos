@@ -1,0 +1,175 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "5c54f61530dc436cf82722decbc41bf4",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "88518b90-d57b-11e9-b9ee-efddcf58bf4b",
+            "name": "listaContatos",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3000,
+            "routes": [
+                {
+                    "uuid": "8fc11440-d57b-11e9-b9ee-efddcf58bf4b",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts/authenticate",
+                    "body": "{\n    \"user\": \"gustavoi\",\n    \"name\": \"Gustavo Irano\",\n    \"image\": \"https://miro.medium.com/max/1500/1*el6sFan9BTKZOecchPyFsA.jpeg\",\n    \"email\": \"gustavo@hotm.com\",\n    \"roles\": [\"user\", \"manager\"],\n    \"token\": \"czHbiPMjs66xKgcbMw2Yhnpas4YcLy4B\"\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "9a968770-d57f-11e9-b9ee-efddcf58bf4b",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "contacts",
+                    "body": "[{\n    \"id\"   : \"1\",\n    \"name\" : \"André\",\n    \"email\": \"andr@asda.com\",\n    \"cpf\"  : \"123.456.789-2\",\n    \"phone\": \"1234-5678\",\n    \"image\": \"https://picsum.photos/id/809/200/300.jpg\",\n    \"address\":  { \n                   \"street\": \"Rua dos devs\",\n                   \"number\": \"1234\",\n                   \"neighborhood\": \"Centro\",\n                   \"city\": \"Araraquara - SP\",\n                   \"country\" : \"Brasil\" } \n},\n{\n    \"id\"   : \"2\",\n    \"name\" : \"Celso\",\n    \"email\": \"andr@asda.com\",\n    \"cpf\"  : \"123.456.789-2\",\n    \"phone\": \"1234-5678\",\n    \"image\": \"https://picsum.photos/id/809/200/300.jpg\",\n    \"address\":  { \n                   \"street\": \"Rua dos devs\",\n                   \"number\": \"1234\",\n                   \"neighborhood\": \"Centro\",\n                   \"city\": \"Araraquara - SP\",\n                   \"country\" : \"Brasil\" } \n},\n{\n    \"id\"   : \"3\",\n    \"name\" : \"Fábio\",\n    \"email\": \"andr@asda.com\",\n    \"cpf\"  : \"123.456.789-2\",\n    \"phone\": \"1234-5678\",\n    \"image\": \"https://picsum.photos/id/809/200/300.jpg\",\n    \"address\":  { \n                   \"street\": \"Rua dos devs\",\n                   \"number\": \"1234\",\n                   \"neighborhood\": \"Centro\",\n                   \"city\": \"Araraquara - SP\",\n                   \"country\" : \"Brasil\" } \n},\n{\n    \"id\"   : \"4\",\n    \"name\" : \"Gustavo\",\n    \"email\": \"andr@asda.com\",\n    \"cpf\"  : \"123.456.789-2\",\n    \"phone\": \"1234-5678\",\n    \"image\": \"https://picsum.photos/id/809/200/300.jpg\",\n    \"address\":  { \n                   \"street\": \"Rua dos devs\",\n                   \"number\": \"1234\",\n                   \"neighborhood\": \"Centro\",\n                   \"city\": \"Araraquara - SP\",\n                   \"country\" : \"Brasil\" } \n}   \n]",
+                    "latency": 2500,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "f4ee5ab0-d58c-11e9-b9ee-efddcf58bf4b",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "contact",
+                    "body": "{\n    \"message\": \"Contato cadastrado com sucesso!\",\n    \"success\": true,\n    \"data\": {\n        \"id\" : \"1\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "2950d8a0-d58d-11e9-b9ee-efddcf58bf4b",
+                    "documentation": "",
+                    "method": "put",
+                    "endpoint": "contact/1",
+                    "body": "{\n    \"message\": \"Contato alterado com sucesso!\",\n    \"success\": true,\n    \"data\": {\n        \"id\" : \"1\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "4db25310-d590-11e9-b9ee-efddcf58bf4b",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "contact/1",
+                    "body": "{\n    \"id\"   : \"1\",\n    \"name\" : \"André\",\n    \"email\": \"andr@asda.com\",\n    \"cpf\"  : \"123.456.789-2\",\n    \"phone\": \"1234-5678\",\n    \"image\": \"https://picsum.photos/id/809/200/300.jpg\",\n    \"address\": { \n                   \"street\": \"Rua dos devs\",\n                   \"number\": \"1234\",\n                   \"neighborhood\": \"Centro\",\n                   \"city\": \"Araraquara - SP\",\n                   \"country\" : \"Brasil\" } \n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "3a932190-d641-11e9-b4e7-2b9ad8dd0bc4",
+                    "documentation": "",
+                    "method": "delete",
+                    "endpoint": "contact/1",
+                    "body": "{\n    \"message\": \"Contato excluído com sucesso!\",\n    \"success\": true,\n    \"data\": {\n        \"id\" : \"1\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "267c45b0-d65a-11e9-b4e7-2b9ad8dd0bc4",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "addUser",
+                    "body": "{\n    \"message\": \"Cadastrado realizado com sucesso!\",\n    \"success\": true,\n    \"data\": {\n        \"id\" : \"1\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "5c184db0-d65d-11e9-b4e7-2b9ad8dd0bc4",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "resetPassword",
+                    "body": "{\n    \"message\": \"A nova senha foi enviada para o seu e-mail!\",\n    \"success\": true,\n    \"data\": {\n        \"id\" : \"1\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Origin, X-Requested-With, Content-Type, Accept"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,POST,PUT,DELETE,OPTIONS"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        }
+    ]
+}

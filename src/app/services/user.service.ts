@@ -14,4 +14,12 @@ export class UserService {
   auth(data: any) {
     return this.http.post(`${environment.apiUrl}accounts/authenticate`, data);
   }
+
+  addUser(user: any){
+    return this.http.post(`${environment.apiUrl}addUser`, user);
+  }
+
+  resetPassword(email: string){
+    return this.http.post(`${environment.apiUrl}resetPassword`, email);
+  }
 }

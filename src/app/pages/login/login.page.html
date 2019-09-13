@@ -11,22 +11,38 @@
               <ion-list>
                 <ion-item>
                   <ion-label position="floating">Usuário</ion-label>
-                  <ion-input type="text" formControlName="username"></ion-input>
+                  <ion-input type="text" formControlName="username"
+                    [ngClass]="{'uk-form-danger': (!form.controls.username.valid && !form.controls.username.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.username.invalid && !form.controls.username.pristine">
+                    O campo usuário deve ser preenchido!
+                  </span>
                 </ion-item>
                 <ion-item>
                   <ion-label position="floating">Senha</ion-label>
-                  <ion-input type="password" formControlName="password"></ion-input>
+                  <ion-input type="password" formControlName="password"
+                    [ngClass]="{'uk-form-danger': (!form.controls.password.valid && !form.controls.password.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.password.invalid && !form.controls.password.pristine">
+                      O campo senha deve ser preenchido!
+                  </span>
                 </ion-item>
               </ion-list>
             </form>
           </ion-card-content>
         </ion-card>
         <p>
-          <ion-button color="primary" shape="round" fill="outline" size="large" expand="full" [disabled]="form.invalid"
+          <ion-button color="primary" shape="round" fill="outline" size="large" expand="full" 
+          [disabled]="form.invalid"
             (click)="submit()">
             ENTRAR
           </ion-button>
           <br>
+          <ion-button (click)="resetPassword()" color="medium" fill="clear" size="small" expand="full"
+            [disabled]="form.controls.username.invalid">
+            Recuperar senha
+          </ion-button>
+          <br>          
           <ion-button routerLink="/signup" color="medium" fill="clear" size="small" expand="full">
             Ainda não sou cadastrado
           </ion-button>

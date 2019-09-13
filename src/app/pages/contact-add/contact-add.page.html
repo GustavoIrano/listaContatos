@@ -15,49 +15,91 @@
               
                 <ion-item>
                   <ion-label position="floating">Nome</ion-label>
-                  <ion-input type="text" formControlName="name"></ion-input>
+                  <ion-input type="text" formControlName="name"
+                    [ngClass]="{'uk-form-danger': (!form.controls.name.valid && !form.controls.name.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.name.invalid && !form.controls.name.pristine">
+                      O campo nome deve ser preenchido!
+                  </span>
                 </ion-item>
                 <ion-item>
                   <ion-label position="floating">E-mail</ion-label>
-                  <ion-input type="email" formControlName="email"></ion-input>
+                  <ion-input type="email" formControlName="email"
+                    [ngClass]="{'uk-form-danger': (!form.controls.email.valid && !form.controls.email.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.email.invalid && !form.controls.email.pristine">
+                      E-mail inválido!
+                  </span>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">CPF</ion-label>
-                    <ion-input type="text" formControlName="cpf"></ion-input>
+                  <ion-label position="floating">CPF</ion-label>
+                  <ion-input mask="###.###.###-##" type="text" formControlName="cpf"
+                    [ngClass]="{'uk-form-danger': (!form.controls.cpf.valid && !form.controls.cpf.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.cpf.invalid && !form.controls.cpf.pristine">
+                      CPF inválido!
+                  </span>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">Telefone</ion-label>
-                    <ion-input type="text" formControlName="phone"></ion-input>
+                  <ion-label position="floating">Telefone</ion-label>
+                  <ion-input mask="(##)#####-####" type="text" formControlName="phone"
+                    [ngClass]="{'uk-form-danger': (!form.controls.phone.valid && !form.controls.phone.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="form.controls.phone.invalid && !form.controls.phone.pristine">
+                      O campo Telefone deve ser preenchido!
+                  </span>
                 </ion-item>
           </form>
-
-            
-          <hr>
 
           <form [formGroup]="formAddress">
               <ion-item>
                   <ion-label position="floating">Rua</ion-label>
-                  <ion-input type="text" formControlName="street"></ion-input>
+                  <ion-input type="text" formControlName="street"
+                    [ngClass]="{'uk-form-danger': (!formAddress.controls.street.valid && !formAddress.controls.street.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="formAddress.controls.street.invalid && !formAddress.controls.street.pristine">
+                      O campo Rua deve ser preenchido!
+                  </span>
               </ion-item>
     
               <ion-item>
                   <ion-label position="floating">Número</ion-label>
-                  <ion-input type="text" formControlName="number"></ion-input>
+                  <ion-input type="text" formControlName="number"
+                    [ngClass]="{'uk-form-danger': (!formAddress.controls.number.valid && !formAddress.controls.number.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="formAddress.controls.number.invalid && !formAddress.controls.number.pristine">
+                      O campo Número deve ser preenchido!
+                  </span>
               </ion-item>
     
               <ion-item>
                   <ion-label position="floating">Bairro</ion-label>
-                  <ion-input type="text" formControlName="neighborhood"></ion-input>
+                  <ion-input type="text" formControlName="neighborhood"
+                    [ngClass]="{'uk-form-danger': (!formAddress.controls.neighborhood.valid && !formAddress.controls.neighborhood.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="formAddress.controls.neighborhood.invalid && !formAddress.controls.neighborhood.pristine">
+                      O campo Bairro deve ser preenchido!
+                  </span>
               </ion-item>
     
               <ion-item>
                   <ion-label position="floating">Cidade</ion-label>
-                  <ion-input type="text" formControlName="city"></ion-input>
+                  <ion-input type="text" formControlName="city"
+                    [ngClass]="{'uk-form-danger': (!formAddress.controls.city.valid && !formAddress.controls.city.pristine)}">
+                </ion-input>
+                <span class="uk-text-danger" *ngIf="formAddress.controls.city.invalid && !formAddress.controls.city.pristine">
+                    O campo Cidade deve ser preenchido!
+                </span>
               </ion-item>
     
               <ion-item>
                   <ion-label position="floating">País</ion-label>
-                  <ion-input type="text" formControlName="country"></ion-input>
+                  <ion-input type="text" formControlName="country"
+                    [ngClass]="{'uk-form-danger': (!formAddress.controls.country.valid && !formAddress.controls.country.pristine)}">
+                  </ion-input>
+                  <span class="uk-text-danger" *ngIf="formAddress.controls.country.invalid && !formAddress.controls.country.pristine">
+                      O campo País deve ser preenchido!
+                  </span>
               </ion-item>
             </form>
          

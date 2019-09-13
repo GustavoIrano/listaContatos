@@ -4,6 +4,7 @@ import { ContactService } from 'src/app/services/contact.service';
 import { ActivatedRoute } from '@angular/router';
 import { Contact } from 'src/app/models/contact.model';
 import { ToastController, NavController } from '@ionic/angular';
+import { CustomValidator } from 'src/app/validators/custom.validator';
 
 @Component({
   selector: 'app-contact-edit',
@@ -26,8 +27,8 @@ export class ContactEditPage implements OnInit {
     this.form = this.fb.group({
       id: ['', Validators.required],
       name: ['', Validators.required],
-      email: ['', Validators.required],
-      cpf: ['', Validators.required],
+      email: ['', Validators.compose([ Validators.required, CustomValidator.EmailValidator ])],
+      cpf: ['', Validators.compose([Validators.required, CustomValidator.isCpf]) ],
       phone: ['', Validators.required],
       address : ['']
     });

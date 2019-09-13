@@ -21,7 +21,8 @@ const routes: Routes = [
         path: 'contact-edit/:id', 
         loadChildren: ()=> import('./pages/contact-edit/contact-edit.module').then(m => m.ContactEditPageModule)  
       }
-    ] },   
+    ] },   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
+  
  
 ];
 

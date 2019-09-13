@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
         (err: any) => {
           loading.dismiss();
           console.log(err);
-          this.showError('Usuário ou senha inválidos');
+          this.showMessage('Usuário ou senha inválidos');
         },
       );
   }
@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateRoot('/');
   }
 
-  async showError(message: string) {
+  async showMessage(message: string) {
     const toast = await this.toastCtrl.create({
       message: message,
       duration: 3000,
@@ -59,5 +59,15 @@ export class LoginPage implements OnInit {
       closeButtonText: 'Fechar',
     });
     toast.present();
+  }
+
+  resetPassword(){
+    this.service.resetPassword(this.form.value)
+      .subscribe(
+        (res: any) => {
+          this.showMessage(res.message);
+        },
+        (err) => {}
+      );
   }
 }

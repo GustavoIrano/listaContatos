@@ -5,26 +5,25 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ContactAddPage } from './contact-add.page';
-import { MaskDirective } from 'src/app/directives/mask.directive';
+import { SignupPage } from './signup.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: ContactAddPage
+    component: SignupPage
   }
 ];
 
 @NgModule({
-  imports: [  
+  imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IonicModule,
     ComponentsModule,
+    IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ContactAddPage]
+  declarations: [SignupPage]
 })
-export class ContactAddPageModule {}
+export class SignupPageModule {}

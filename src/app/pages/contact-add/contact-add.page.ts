@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 import { ToastController } from '@ionic/angular';
+import { CustomValidator } from 'src/app/validators/custom.validator';
 
 @Component({
   selector: 'app-contact-add',
@@ -20,8 +21,8 @@ export class ContactAddPage implements OnInit {
   ) { 
     this.form = this.fb.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
-      cpf: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, CustomValidator.EmailValidator])],
+      cpf: ['', Validators.compose([Validators.required, CustomValidator.isCpf])],
       phone: ['', Validators.required],
       address : ['']
     });

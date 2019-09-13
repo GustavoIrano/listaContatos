@@ -8,11 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenuPage } from './pages/menu/menu.page';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
+import { MaskDirective } from './directives/mask.directive';
 
 @NgModule({
-  declarations: [AppComponent,
-                 MenuPage
-                ],
+  declarations: [
+    AppComponent,
+    MenuPage,
+  ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
@@ -21,4 +23,4 @@ import { AuthGuard } from './guards/auth.guard';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
