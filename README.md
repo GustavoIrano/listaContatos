@@ -1,3 +1,3 @@
 # listaContatos
 
-<b>TODO List with Angular</b>
+<b>TODO List Angular with IonicModule</b>
